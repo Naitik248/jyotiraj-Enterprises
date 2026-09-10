@@ -1,0 +1,1098 @@
+:root {
+    --blue: #2544ff;
+    --ink: #08080a;
+    --cream: #f2f1ed;
+    --muted: #a6a6aa
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--cream);
+    font-family: Manrope, Arial, sans-serif;
+    overflow-x: hidden
+}
+
+.wrap {
+    max-width: 1320px;
+    margin: auto;
+    padding-left: clamp(24px, 5vw, 72px);
+    padding-right: clamp(24px, 5vw, 72px)
+}
+
+.noise {
+    position: fixed;
+    inset: 0;
+    opacity: .04;
+    z-index: 5;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")
+}
+
+.cursor-glow {
+    position: fixed;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(37, 68, 255, .18), transparent 68%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1
+}
+
+.nav {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 4
+}
+
+.brand {
+    font-size: 27px;
+    color: var(--cream);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none
+}
+
+.brand span {
+    font-size: 8px;
+    vertical-align: top;
+    margin-left: 2px;
+    letter-spacing: 0
+}
+
+.nav nav {
+    display: flex;
+    gap: 30px
+}
+
+.nav a {
+    color: var(--cream);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.nav-cta {
+    border: 1px solid #444;
+    padding: 11px 15px;
+    border-radius: 99px
+}
+
+.nav-cta span,
+.text-link span {
+    color: var(--blue);
+    font-size: 18px;
+    margin-left: 7px
+}
+
+.hero {
+    height: min(740px, calc(100vh - 50px));
+    min-height: 620px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 90px
+}
+
+.eyebrow,
+.hero-code,
+.product-brand {
+    font: 11px 'DM Mono', monospace;
+    letter-spacing: .02em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin: 0
+}
+
+.hero h1,
+h2 {
+    font-size: clamp(56px, 8.2vw, 132px);
+    line-height: .86;
+    letter-spacing: -.075em;
+    margin: 25px 0 0;
+    font-weight: 700;
+    position: relative;
+    z-index: 2
+}
+
+.hero em,
+h2 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -.08em
+}
+
+.hero em {
+    color: var(--blue)
+}
+
+.hero-bottom {
+    display: flex;
+    align-items: end;
+    gap: 30px;
+    position: absolute;
+    z-index: 3;
+    bottom: 62px
+}
+
+.hero-bottom p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    color: #cbcbcf
+}
+
+.circle-link {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    position: relative
+}
+
+.circle-link b {
+    position: absolute;
+    right: 18px;
+    bottom: 16px;
+    font-size: 17px
+}
+
+.hero-device {
+    position: absolute;
+    right: 13%;
+    bottom: 0px;
+    width: 360px;
+    height: 680px;
+    transform: rotate(18deg);
+    filter: drop-shadow(-38px 18px 25px rgba(0, 0, 0, .65));
+    z-index: 1
+}
+
+.phone-body {
+    background: linear-gradient(120deg, #2a49ff, #112391 65%, #1626b9);
+    height: 100%;
+    border-radius: 48px;
+    border: 5px solid #4f68ff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 22px rgba(255, 255, 255, .3)
+}
+
+.phone-body:after {
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 50%;
+    top: 32%;
+    left: -10%;
+    background: linear-gradient(135deg, transparent 43%, rgba(255, 255, 255, .16) 50%, transparent 55%);
+    transform: rotate(-25deg)
+}
+
+.island {
+    width: 100px;
+    height: 25px;
+    background: #0c0d16;
+    border-radius: 50px;
+    left: 50%;
+    top: 14px;
+    transform: translateX(-50%);
+    position: absolute
+}
+
+.camera {
+    position: absolute;
+    left: 25px;
+    top: 65px;
+    width: 130px;
+    height: 130px;
+    border-radius: 34px;
+    background: #1832b6;
+    border: 2px solid #4661ff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 12px
+}
+
+.camera i {
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 38% 32%, #7dbeff 0 4%, #17246d 8%, #030515 52%, #3c46a4 57%, #05060b 67%)
+}
+
+.camera i:last-child {
+    grid-column: 1
+}
+
+.phone-mark {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    letter-spacing: 7px;
+    font-size: 12px;
+    font-weight: 800
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px)
+}
+
+.orb-one {
+    width: 470px;
+    height: 470px;
+    background: radial-gradient(circle at 40% 35%, #566bff, transparent 55%);
+    right: 1%;
+    top: 10%
+}
+
+.orb-two {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #2939a3;
+    left: -140px;
+    bottom: 0
+}
+
+.hero-code {
+    position: absolute;
+    right: 5vw;
+    bottom: 45px;
+    writing-mode: vertical-rl
+}
+
+.marquee {
+    overflow: hidden;
+    border-top: 1px solid #29292d;
+    border-bottom: 1px solid #29292d;
+    padding: 20px 0;
+    white-space: nowrap;
+    color: var(--cream);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -.05em
+}
+
+.marquee div {
+    animation: scroll 20s linear infinite
+}
+
+.marquee span {
+    color: var(--blue);
+    padding: 0 30px
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+.phones {
+    padding-top: 150px;
+    padding-bottom: 160px
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 45px
+}
+
+.section-head h2,
+.experience h2,
+.visit h2,
+footer h2 {
+    font-size: clamp(46px, 6vw, 88px)
+}
+
+.filter-button {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid #555;
+    border-radius: 50px;
+    padding: 14px 17px;
+    font: 12px Manrope;
+    font-weight: 700
+}
+
+.filter-button span {
+    color: var(--blue);
+    font-size: 19px;
+    margin-left: 18px
+}
+
+.filters {
+    display: none;
+    gap: 8px;
+    margin: -26px 0 28px
+}
+
+.filters button {
+    background: #1c1c20;
+    border: 0;
+    border-radius: 50px;
+    padding: 10px 14px;
+    color: #aaa;
+    font: 12px Manrope
+}
+
+.filters button.active {
+    background: var(--blue);
+    color: #fff
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 14px
+}
+
+.product-card {
+    background: #161619;
+    min-height: 470px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: transform .35s ease, background .35s
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    background: #1c1c20
+}
+
+.tag {
+    position: absolute;
+    background: var(--blue);
+    font: 10px 'DM Mono';
+    padding: 7px 9px;
+    z-index: 2
+}
+
+.product-art {
+    position: absolute;
+    inset: 0;
+    overflow: hidden
+}
+
+/* Product imagery lives in /assets/phones. These rules make replacements fit. */
+.product-art img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 28px;
+    filter: drop-shadow(-18px 24px 20px rgba(0, 0, 0, .35));
+    transition: transform .5s cubic-bezier(.2, .7, .2, 1);
+}
+
+.product-card:hover .product-art img {
+    transform: scale(1.06) rotate(-3deg);
+}
+
+.art-blue {
+    background: radial-gradient(circle at 55% 35%, #434366, transparent 40%), #5d5d75
+}
+
+.art-silver {
+    background: radial-gradient(circle at 50% 20%,#fa9050, #f67e33 70%)
+}
+
+.art-dark {
+    background: radial-gradient(circle at 40% 30%, #3b3f49, #101013 65%)
+}
+
+.mini-phone {
+    position: absolute;
+    border-radius: 24px;
+    width: 160px;
+    height: 300px;
+    left: 50%;
+    top: 38px;
+    transform: translateX(-50%) rotate(-16deg);
+    box-shadow: -18px 25px 35px rgba(0, 0, 0, .3)
+}
+
+.mini-phone:before {
+    content: "";
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    left: 13px;
+    top: 16px;
+    border-radius: 16px;
+    background: #233bc4
+}
+
+.mini-phone i,
+.fold-phone i {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    left: 21px;
+    top: 24px;
+    background: #05050a;
+    border: 3px solid #566bff
+}
+
+.mini-phone i:nth-child(2) {
+    top: 49px
+}
+
+.blue-phone {
+    background: linear-gradient(135deg, #3957ff, #1025aa);
+    border: 2px solid #6681ff
+}
+
+.silver-phone {
+    background: linear-gradient(130deg, #f7f7f7, #9a9ca0);
+    transform: translateX(-50%) rotate(16deg)
+}
+
+.silver-phone:before {
+    background: #b4b5b9
+}
+
+.silver-phone i {
+    border-color: #555
+}
+
+.fold-phone {
+    position: absolute;
+    width: 245px;
+    height: 245px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-13deg);
+    background: linear-gradient(110deg, #22252e 48%, #0d0e10 49% 53%, #313641 54%);
+    border-radius: 13px;
+    box-shadow: -15px 20px 30px #0008
+}
+
+.fold-phone i {
+    top: 15px;
+    left: 15px;
+    border-color: #6e7480
+}
+
+.fold-phone i:nth-child(2) {
+    top: 42px
+}
+
+.product-copy {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: end;
+    justify-content: space-between
+}
+
+.product-copy h3 {
+    font-size: 20px;
+    letter-spacing: -.07em;
+    margin: 6px 0 0
+}
+
+.product-copy>p {
+    font: 11px 'DM Mono';
+    margin: 0
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 10vw, 150px);
+    padding-bottom: 150px;
+    align-items: center
+}
+
+.experience-art {
+    height: 580px;
+    background: var(--blue);
+    position: relative;
+    overflow: hidden
+}
+
+.experience-art p {
+    position: absolute;
+    left: 24px;
+    bottom: 20px;
+    font: 11px 'DM Mono';
+    color: white;
+    margin: 0
+}
+
+.rings {
+    position: absolute;
+    width: 590px;
+    height: 590px;
+    border: 1px solid #8d9cff;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.rings:before,
+.rings:after {
+    content: "";
+    position: absolute;
+    inset: 52px;
+    border: 1px solid #8d9cff;
+    border-radius: 50%
+}
+
+.rings:after {
+    inset: 105px
+}
+
+.experience-phone {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 190px;
+    height: 360px;
+    transform: translate(-50%, -50%) rotate(25deg);
+    background: linear-gradient(120deg, #101e86, #5870ff);
+    border: 3px solid #8293ff;
+    border-radius: 30px;
+    box-shadow: -20px 22px 30px #0b1979
+}
+
+.experience-phone span {
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 50%;
+    border: 3px solid #5267ff;
+    background: #050615;
+    margin: 15px
+}
+
+.experience-copy h2 {
+    margin-top: 22px
+}
+
+.large-copy {
+    line-height: 1.65;
+    color: #c5c5c8;
+    max-width: 365px;
+    margin: 35px 0
+}
+
+.perks {
+    border-top: 1px solid #353538
+}
+
+.perks div {
+    display: flex;
+    gap: 25px;
+    padding: 16px 0;
+    border-bottom: 1px solid #353538;
+    font-size: 13px
+}
+
+.perks b {
+    font: 11px 'DM Mono';
+    color: var(--blue)
+}
+
+.visit {
+    padding-bottom: 145px
+}
+
+.visit-row {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin: 25px 0 40px
+}
+
+.text-link {
+    color: var(--cream);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.store-card {
+    height: 220px;
+    background: linear-gradient(100deg, #1b1b20 20%, #1025a4);
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end
+}
+
+.store-card p {
+    font-size: 24px;
+    margin: 0 0 5px;
+    letter-spacing: -.06em
+}
+
+.store-card small {
+    color: #b7b7bc;
+    font-size: 11px
+}
+
+.pin {
+    color: var(--blue);
+    font-size: 20px;
+    position: absolute;
+    margin-top: -120px
+}
+
+.store-card button {
+    border: 0;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    background: var(--cream);
+    font-size: 21px;
+    color: var(--blue)
+}
+
+footer {
+    background: var(--blue);
+    color: white;
+    padding-top: 110px
+}
+
+.footer-top h2 {
+    margin-top: 22px
+}
+
+.footer-top .eyebrow {
+    color: #b3c0ff
+}
+
+form {
+    display: flex;
+    margin-top: 55px;
+    border-bottom: 1px solid #b2bdff;
+    max-width: 650px
+}
+
+input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    color: white;
+    font: 16px Manrope;
+    padding: 16px 0;
+    outline: none
+}
+
+input::placeholder {
+    color: #b2bdff
+}
+
+form button {
+    background: transparent;
+    color: white;
+    border: 0;
+    font: 12px Manrope;
+    font-weight: 800;
+    white-space: nowrap
+}
+
+.form-message {
+    font-size: 12px;
+    min-height: 24px
+}
+
+.footer-bottom {
+    margin-top: 90px;
+    padding-top: 27px;
+    padding-bottom: 30px;
+    border-top: 1px solid #8696ff;
+    display: flex;
+    align-items: center;
+    gap: 40px
+}
+
+.footer-contact {
+    display: flex;
+    gap: 20px;
+    flex: 1
+}
+
+.footer-bottom a,
+.footer-bottom p {
+    color: white;
+    text-decoration: none;
+    font: 11px 'DM Mono';
+    margin: 0
+}
+
+.back-top {
+    margin-left: auto
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s ease, transform .7s ease
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0)
+}
+
+@media(max-width:720px) {
+    .nav nav {
+        display: none
+    }
+
+    .nav-cta {
+        padding: 9px 11px
+    }
+
+    .hero {
+        min-height: 610px;
+        padding-top: 70px
+    }
+
+    .hero h1 {
+        font-size: clamp(55px, 16vw, 82px)
+    }
+
+    .hero-device {
+        right: -35px;
+        width: 255px;
+        height: 500px;
+        bottom: -120px
+    }
+
+    .phone-body {
+        border-radius: 35px
+    }
+
+    .camera {
+        transform: scale(.72);
+        transform-origin: top left
+    }
+
+    .hero-bottom {
+        bottom: 35px
+    }
+
+    .hero-bottom p {
+        font-size: 12px
+    }
+
+    .circle-link {
+        width: 88px;
+        height: 88px
+    }
+
+    .hero-code {
+        display: none
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr
+    }
+
+    .product-card {
+        min-height: 400px
+    }
+
+    .product-card.featured {
+        min-height: 490px
+    }
+
+    .experience {
+        grid-template-columns: 1fr;
+        padding-bottom: 100px
+    }
+
+    .experience-art {
+        height: 420px
+    }
+
+    .visit-row {
+        display: block
+    }
+
+    .visit-row .text-link {
+        display: inline-block;
+        margin-top: 25px
+    }
+
+    .footer-bottom {
+        display: grid;
+        gap: 20px
+    }
+
+    .footer-contact {
+        display: grid;
+        gap: 10px
+    }
+
+    .back-top {
+        margin-left: 0
+    }
+
+    .phones {
+        padding-top: 100px;
+        padding-bottom: 100px
+    }
+
+    .section-head {
+        margin-bottom: 32px
+    }
+
+    .filters {
+        overflow: auto
+    }
+
+    .store-card {
+        height: 190px
+    }
+}
+
+/* --------------------------------------------------------------------------
+   IMMERSIVE 3D PRODUCT STAGE
+   These values are grouped here so the composition is easy to tune.
+   -------------------------------------------------------------------------- */
+
+.hero-stage {
+    --pointer-x: 50%;
+    --pointer-y: 50%;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: auto;
+    perspective: 1100px;
+    transform-style: preserve-3d;
+}
+
+.hero-stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(115, 135, 255, .3), transparent 24%);
+    mix-blend-mode: screen;
+    pointer-events: none;
+    transition: background .2s ease;
+}
+
+/* Receding floor grid creates the stage's depth cue. */
+.stage-grid {
+    position: absolute;
+    width: 130%;
+    height: 50%;
+    left: -15%;
+    bottom: -26%;
+    opacity: .38;
+    background-image: linear-gradient(rgba(84, 107, 255, .5) 1px, transparent 1px), linear-gradient(90deg, rgba(84, 107, 255, .5) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: rotateX(68deg) translateZ(-180px);
+    transform-origin: center top;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 34%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 34%, transparent);
+}
+
+.stage-ring {
+    position: absolute;
+    width: 610px;
+    height: 610px;
+    right: 1%;
+    top: 6%;
+    border: 1px solid rgba(104, 125, 255, .35);
+    border-radius: 50%;
+    transform: translateZ(-80px) rotateX(68deg);
+}
+
+.ring-b {
+    width: 440px;
+    height: 440px;
+    right: 8%;
+    top: 18%;
+    border-color: rgba(135, 152, 255, .24);
+}
+
+/* The handset is lifted above every environment layer. */
+.hero-stage .hero-device {
+    z-index: 3;
+    transform: translate3d(0, 0, 90px) rotateZ(18deg);
+    transform-style: preserve-3d;
+    transition: transform .45s cubic-bezier(.2, .7, .2, 1);
+    will-change: transform;
+}
+
+
+.hero-product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(28px 44px 38px rgba(0, 0, 0, .55));
+    user-select: none;
+}
+
+.hero-stage .phone-body {
+    box-shadow: inset 0 0 22px rgba(255, 255, 255, .3), 28px 44px 72px rgba(0, 0, 0, .55);
+}
+
+.float-card {
+    position: absolute;
+    z-index: 4;
+    display: grid;
+    gap: 5px;
+    min-width: 110px;
+    padding: 13px 16px;
+    border: 1px solid rgba(177, 190, 255, .32);
+    background: rgba(18, 29, 99, .38);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, .22);
+    backdrop-filter: blur(12px);
+    color: white;
+    transform-style: preserve-3d;
+    animation: hover-card 5s ease-in-out infinite;
+}
+
+.float-card span { font: 500 18px 'DM Mono', monospace; }
+.float-card small { color: #c1caff; font: 10px 'DM Mono', monospace; text-transform: uppercase; }
+.float-card-left { right: 40%; top: 31%; transform: translateZ(150px) rotate(-7deg); }
+.float-card-left1 { right: 14%; top: 10%; transform: translateZ(150px) rotate(-7deg); }
+.float-card-right { right: 6%; top: 54%; transform: translateZ(75px) rotate(7deg); animation-delay: -2s; }
+
+@keyframes hover-card { 50% { translate: 0 -13px; } }
+
+/* Floating data chips give the experience panel its own depth system. */
+.spec-chip {
+    position: absolute;
+    z-index: 2;
+    display: grid;
+    gap: 2px;
+    padding: 11px 14px;
+    border: 1px solid rgba(255, 255, 255, .48);
+    background: rgba(26, 51, 205, .55);
+    box-shadow: 12px 15px 22px rgba(7, 16, 89, .25);
+    backdrop-filter: blur(8px);
+    font: 500 18px 'DM Mono', monospace;
+    transform: rotate(-7deg);
+}
+
+.spec-chip small { font-size: 8px; letter-spacing: .08em; }
+.chip-one { left: 8%; top: 22%; }
+.chip-two { right: 8%; bottom: 23%; transform: rotate(8deg); }
+
+@media (max-width: 720px) {
+    .stage-ring { width: 370px; height: 370px; right: -16%; top: 15%; }
+    .ring-b { width: 265px; height: 265px; right: 0; top: 25%; }
+    .float-card-left { right: 39%; top: 32%; }
+    .float-card-right { display: none; }
+    .hero-stage .hero-device { transform: translate3d(0, 0, 70px) rotateZ(18deg); }
+    .spec-chip { transform: scale(.82) rotate(-7deg); }
+    .chip-two { transform: scale(.82) rotate(8deg); }
+}
+
+/* --------------------------------------------------------------------------
+   REPAIR SERVICES AND PRODUCT ENQUIRIES
+   -------------------------------------------------------------------------- */
+
+.repairs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 150px;
+}
+
+.repair-heading h2 { margin-top: 22px; }
+
+.repair-intro {
+    align-self: end;
+    max-width: 420px;
+}
+
+.repair-intro p {
+    color: #c5c5c8;
+    line-height: 1.7;
+    margin: 0 0 28px;
+}
+
+.repair-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #353538;
+}
+
+.repair-grid article {
+    min-height: 195px;
+    padding: 24px;
+    border-right: 1px solid #353538;
+    background: linear-gradient(145deg, #15151a, #0d0d0f);
+}
+
+.repair-grid article:last-child { border-right: 0; }
+.repair-grid span { color: var(--blue); font: 11px 'DM Mono', monospace; }
+.repair-grid h3 { margin: 55px 0 9px; font-size: 21px; letter-spacing: -.06em; }
+.repair-grid p { margin: 0; color: #aaaab0; font-size: 12px; line-height: 1.55; }
+
+.enquiry-copy {
+    max-width: 480px;
+    margin: 36px 0 24px;
+    color: #d3d9ff;
+    line-height: 1.65;
+}
+
+.enquiry-link {
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font: 500 clamp(17px, 2vw, 25px) 'DM Mono', monospace;
+    text-decoration: none;
+}
+
+.enquiry-link span { color: #b7c3ff; }
+
+@media (max-width: 720px) {
+    .repairs { grid-template-columns: 1fr; padding-bottom: 100px; }
+    .repair-grid { grid-template-columns: 1fr; }
+    .repair-grid article { min-height: 150px; border-right: 0; border-bottom: 1px solid #353538; }
+    .repair-grid h3 { margin-top: 30px; }
+}

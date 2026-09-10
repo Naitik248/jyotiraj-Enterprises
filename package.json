@@ -1,0 +1,7 @@
+{
+  "name": "meet-nest",
+  "private": true,
+  "workspaces": ["apps/*"],
+  "scripts": { "dev:api": "npm run dev --workspace=@meet-nest/api", "dev:mobile": "npm run start --workspace=@meet-nest/mobile", "db:generate": "npm run prisma:generate --workspace=@meet-nest/api", "db:migrate": "npm run prisma:migrate --workspace=@meet-nest/api" },
+  "engines": { "node": ">=20" }
+}

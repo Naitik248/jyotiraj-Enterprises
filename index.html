@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NOVA — premium phones, thoughtfully selected." />
+  <title>Jyotiraj Enterprises</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="noise"></div>
+  <div class="cursor-glow"></div>
+  <header class="nav wrap">
+    <a class="brand" href="#top" aria-label="Nova home">Jyotiraj Enterprises<span>®</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#phones">Phones</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow reveal">[ Technology, curated ]</p>
+      <h1 class="reveal">Future-proof<br /><em>your everyday.</em></h1>
+      <div class="hero-bottom reveal">
+        <p>Flagship phones. Expert advice.<br />One uncompromising experience.</p>
+        <a class="circle-link" href="#phones" aria-label="Explore phones"><span>Explore<br />phones</span><b>↓</b></a>
+      </div>
+      <!-- 3D stage: these separate layers create controllable visual depth. -->
+      <div class="hero-stage" id="heroStage" aria-label="Interactive 3D phone display">
+        <div class="stage-grid"></div>
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="stage-ring ring-a"></div>
+        <div class="stage-ring ring-b"></div>
+        <div class="float-card float-card-left"><span>48MP</span><small>Fusion Camera</small></div>
+        <div class="float-card float-card-left1"><span>Redesigned</span><small>IOS Interface</small></div>
+        <div class="float-card float-card-right"><span>A20</span><small>Power Chip</small></div>
+
+        <div class="hero-device">
+          <img class="hero-product-image" src="assets\phones\iphone duo comp.png" alt="Iphone Duo" />
+        </div>
+      </div>
+      <div class="hero-code">01—06 / 2026</div>
+    </section>
+
+    <section class="marquee" aria-label="Our promise">
+      <div>EXCEPTIONAL TECH <span>✦</span> REAL HUMAN ADVICE <span>✦</span> EXCEPTIONAL TECH <span>✦</span> REAL HUMAN
+        ADVICE <span>✦</span></div>
+    </section>
+
+    <section id="phones" class="phones wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">[ Selected for you ]</p>
+          <h2>Meet your<br /><em>next phone.</em></h2>
+        </div><button id="filterButton" class="filter-button">All devices <span>+</span></button>
+      </div>
+      <div class="filters" id="filters" aria-label="Phone filters"><button class="active" data-filter="all">All
+          devices</button><button data-filter="flagship">Flagship</button><button
+          data-filter="everyday">Everyday</button><button data-filter="foldable">Foldable</button></div>
+      <div class="product-grid">
+          <!-- To change a product image, update only the src path below. -->
+          <article class="product-card featured reveal" data-category="flagship">
+          <div class="product-art art-blue"><img src="assets\phones\S26 puple cropped.png" alt="Samsung S26 Ultra" /></div>
+          <div class="product-copy">
+            <div>
+              <p class="product-brand">Samsung</p>
+              <h3>S26 Ultra</h3>
+            </div>
+            <p>From ₹1,39,999</p>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="flagship">
+          <div class="product-art art-silver"><img src="assets\phones\IPHONE 17 pro max cropped.png" alt="IPhone 17 Pro Max" /></div>
+          <div class="product-copy">
+            <div>
+              <p class="product-brand">IPhone</p>
+              <h3>IPhone 17 pro max</h3>
+            </div>
+            <p>From ₹1,49,900</p>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="foldable">
+          <div class="product-art art-dark"><img src="assets\phones\fold z cropped.png" alt="Samsung Z Fold 8" /></div>
+          <div class="product-copy">
+            <div>
+              <p class="product-brand">Samsung</p>
+              <h3>Samsung Z  Fold 8</h3>
+            </div>
+            <p>From ₹1,69,999</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="repairs wrap reveal" id="repairs">
+      <div class="repair-heading">
+        <p class="eyebrow">[ Preimum care ]</p>
+        <h2>Give your phone<br /><em>another life.</em></h2>
+      </div>
+      <div class="repair-intro">
+        <p>From a cracked screen to a tired battery, certified technicians restore the tech you rely on — whatever the brand.</p>
+        <a href="mailto:jyotiraj91@gmail.com?subject=Repair%20service%20enquiry" class="text-link">Book a repair <span>↗</span></a>
+      </div>
+      <div class="repair-grid">
+        <article><span>01</span><h3>Screen repair</h3><p>Genuine-grade displays, fitted with care.</p></article>
+        <article><span>02</span><h3>Battery health</h3><p>Power that makes it through your day.</p></article>
+        <article><span>03</span><h3>Water recovery</h3><p>Fast diagnostics when every minute counts.</p></article>
+      </div>
+    </section>
+
+    <section id="experience" class="experience wrap">
+      <div class="experience-art reveal">
+        <div class="rings"></div>
+        <div class="experience-phone"><span></span><span></span><span></span></div>
+        <div class="spec-chip chip-one">6.8″<small>AMOLED</small></div>
+        <div class="spec-chip chip-two">120<small>HZ</small></div>
+        <p>DESIGNED<br />TO DELIGHT</p>
+      </div>
+      <div class="experience-copy reveal">
+        <p class="eyebrow">[ The Ultimate difference ]</p>
+        <h2>More than a<br /><em>purchase.</em></h2>
+        <p class="large-copy">We help you find the phone that fits your life — then make sure it keeps doing so.</p>
+        <div class="perks">
+          <div><b>01</b><span>Try before you buy</span></div>
+          <div><b>02</b><span>Setup in 30 minutes</span></div>
+          <div><b>03</b><span>1 year screen care</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit wrap reveal">
+      <p class="eyebrow">[ Come visit us  ]</p>
+      <div class="visit-row">
+        <h2>Come <em>say hi.</em></h2><a href="https://maps.app.goo.gl/vozH8WJGNyNRJYpM8" target="_blank" class="text-link">Find your nearest store <span>↗</span></a>
+      </div>
+      <div class="store-card">
+        <div><span class="pin">✦</span>
+          <p>Mumbai</p><small>Turbhe · Open until 9 PM</small>
+        </div><button aria-label="View mumbai store">↗</button>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="wrap footer-top">
+      <p class="eyebrow">[ Product enquiries ]</p>
+      <h2>Let’s find your<br /><em>perfect phone.</em></h2>
+      <p class="enquiry-copy">Tell us what you’re looking for and our product team will get back to you within one business day.</p>
+      <a class="enquiry-link" href="mailto:jyotiraj91@gmail.com?subject=Product%20enquiry">jyotiraj91@gmail.com <span>↗</span></a>
+    </div>
+    <div class="wrap footer-bottom"><a class="brand" href="#top">Jyotirajenterprises<span>®</span></a>
+      <div class="footer-contact"><a href="mailto:jyotiraj91@gmail.com">jyotiraj91@gmail.com</a><a
+          href="tel:+918080601012">+91 8080601012</a></div>
+      <p>© 2010 jyotiraj Enterprises</p><a href="#top" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
